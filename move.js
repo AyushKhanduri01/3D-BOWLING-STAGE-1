@@ -16,13 +16,22 @@ AFRAME.registerComponent("move-with-cam" ,{
         //get the camera direction as Three.js Vector
         var cam_direction = new THREE.Vector3();
         camera.getWorldDirection(cam_direction);
+        console.log(`"x:${cam_direction.x} y:${cam_direction.y} z:${cam_direction.z} "`)
         
-        var object_h = document.querySelector(`#${id}`).object3D
+        // console.log(object_h)
 
-        var object_h_direction = new THREE.Vector3()
-        object_h.getWorldDirection(object_h_direction)
+        // this.el.setAttribute("rotation", {
+        //     x: cam_direction.x,
+        //     y: cam_direction.y,
+        //     z: cam_direction.z
+        // })
+        // console.log(`"Rotations, x:${cam_direction.x} y:${cam_direction.y} z:${cam_direction.z}"`)
 
-        object_h.setWorldDirection(cam_direction)
+
+        // var object_h_direction = new THREE.Vector3()
+        // object_h.getWorldDirection(object_h_direction)
+
+        // object_h.setWorldDirection(cam_direction)
 
     }
 })
